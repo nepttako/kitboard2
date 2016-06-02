@@ -1,0 +1,28 @@
+<%= render 'shared/title', title:'Add New Category' %>
+
+
+<div class="row">
+	<div class="well col-md-6 col-md-offset-1">
+	<bold> Current Categories </bold><br>
+	<% @categories.each do |category| %>
+		<span class="label label-primary"><%= category.name %>
+		</span>
+		<% end %>
+	</div>
+</div>
+<%= form_for(@category) do |f| %>
+<div class="row">
+	<div class="col-md-6 col-md-offset-1">
+  	<div class="field">
+		<%= f.label :name %><br>
+    <%= f.text_field :name, class:"col-md-12" %>
+  	</div>
+
+  	<div class="actions">
+  	<button class="btn btn-primary" type="submit">
+   Submit </button>
+   	<% f.submit %>
+  	</div>
+  </div>
+</div>
+<% end %>

@@ -1,0 +1,15 @@
+<%= render 'shared/title', title:'All Categories' %>
+<div class="row">
+	<div class="well col-md-6 col-md-offset-1">
+	<bold> Current Categories </bold><br>
+	<% @categories.each do |category| %>
+		<span class="label label-primary"><%= category.name %>
+		</span>
+	<% end %>
+	</div>
+
+	<div class="col-md-6 col-md-offset-1">
+	<span>
+  <%= link_to "Add New Category", new_category_path %>
+  </span>
+</div>
