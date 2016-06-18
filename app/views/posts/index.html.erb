@@ -2,6 +2,7 @@
 <%= render 'shared/title', title:'All Posts' %>
 
 <% @posts.each do |post| %>
+
 <div class="row">
   <div class="well col-md-6 col-md-offset-1">
     <div class="panel panel-primary">
@@ -14,6 +15,7 @@
       <span>
       <%= link_to "show post", post_path(post) %> |
       <%= link_to "new post", new_post_path %>
+      
       </span>
       </div>
     </div>
