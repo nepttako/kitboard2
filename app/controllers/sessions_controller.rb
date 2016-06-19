@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
     end
   end
 
-  def destroy
+  def destroy 
     #登出畫面使用，刪除 session hash 裡面的 user_id
     session[:user_id] = nil
     redirect_to root_path
