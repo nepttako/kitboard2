@@ -13,6 +13,12 @@ class UsersController < ApplicationController
 		end
 	end
 
+	def show
+		@user = User.find(params[:id])
+		@posts = @user.posts.order("created_at DESC")
+		@comments = @user.comments.order("created_at DESC")
+	end
+
 	private
 
 		def user_params
