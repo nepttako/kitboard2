@@ -11,8 +11,8 @@
       <%= @post.content %>
       <br>
       <p>
-  		<strong>Author:</strong>
-  		<%= @post.user_id %>
+  		<strong>Author:
+  		<%= @post.user.name if @post.user_id %></strong>
 			</p>
       <br>
       <span>
@@ -29,7 +29,7 @@
 
   		<% @post.comments.each do |comment| %>
     	<li><strong>"<%= comment.content %>"</strong>
-    	from:</li>
+    	from: <%= comment.user.name if comment.user_id %></li>
     	<br>
     	<% end %>
 	</div>
