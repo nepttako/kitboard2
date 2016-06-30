@@ -6,14 +6,16 @@
       <div class="panel-heading">
       	<h3 class="panel-title"><strong>Title: </strong><%= @post.title %></h3>
     	</div>
-    	<div class="panel-body">
+    	<div class="panel-body"> 
+      <p><%= render partial: 'categories/category', collection: @post.categories %></p>
       <strong>Content: </strong>
       <%= @post.content %>
       <br>
       <p>
   		<strong>Author:
   		<%= @post.user.name if @post.user_id %></strong>
-			</p>
+			</p> 
+
       <br>
       <span>
       <%= link_to 'Edit Post', edit_post_path(@post) %>|
