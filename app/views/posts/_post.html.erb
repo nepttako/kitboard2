@@ -8,12 +8,12 @@
       <div class="panel-body">
       <h3><%= post.content %></h3>
       <br>
-      <span><small>
+      <span>
       <%= link_to "Show post", post_path(post) %> |
       <%= render partial: 'categories/category', collection: post.categories %>
       </span>
       <br>
-      <%= "#{post.created_at}" %> </small>
+      <small><%= "#{post.created_at}" %> </small>
       </div>
     </div>
   </div>
