@@ -1,11 +1,10 @@
 <%= render 'shared/title', title:'Editing Post' %>
 
 <div class="row">
-  <div class="col-md-6 col-md-offset-1">
+  <div class="col-md-8 col-md-offset-1">
 <%= render 'form' %>
-<br>
 <span>
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to "Back to post", post_path(@post) %> 
 </span>
+<br>
 </div>
