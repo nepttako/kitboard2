@@ -1,7 +1,7 @@
-<%= render '/shared/title', title: "#{current_user.name}'s Activities" %>
+<%= render '/shared/title', title: "Hello! #{current_user.name}" %>
 
 <div class="col-md-8 col-md-offset-1">
-<h3> Posts: </h3>
+<h3> Your posts: </h3>
 </div>
 <% @posts.each do |post| %>
 
@@ -16,7 +16,7 @@
 <% end %>
 
 <div class="col-md-8 col-md-offset-1">
-<h3> Comments: </h3>
+<h3> Your comments: </h3>
 </div>
 <% @comments.each do |comment| %>
 
