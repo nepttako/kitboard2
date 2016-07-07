@@ -14,7 +14,7 @@ class UsersController < ApplicationController
 	end
 
 	def show
-		@user = User.find(params[:id])
+		@user = current_user
 		@posts = @user.posts.order("created_at DESC")
 		@comments = @user.comments.order("created_at DESC")
 	end
