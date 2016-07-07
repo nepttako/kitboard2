@@ -7,8 +7,10 @@
 		<% if @posts.present? %>
   		<% @posts.each do |post| %>
 			<li><%= link_to "#{post.title}", post_path(post) %>
-      <%= link_to '(Edit Post)', edit_post_path(post) %></li>
-			<small><%= "- #{post.created_at.to_date}" %></small>
+      	<%= link_to '(Edit Post)', edit_post_path(post) %>
+      	<small><%= "- #{post.created_at.to_date}" %></small>
+      </li>
+			
   	<% end %>
 		<% else %>
     <p> You don't have any post yet. Keep posting! </p>
@@ -21,8 +23,8 @@
 		<h3> Your comments: </h3>
 			<% if @comments.present? %>
 				<% @comments.each do |comment| %>
- 		<li><%= link_to "#{comment.content}", post_path(comment.post) %></li>
- 		<small><%= "- #{comment.created_at.to_date}" %></small>
+ 		<li><%= link_to "#{comment.content}", post_path(comment.post) %>
+ 		<small><%= "- #{comment.created_at.to_date}" %></small></li>
  		<% end %>
  		<% else %>
  		<p> You don't have any comment yet. Tell them what you think! </p>

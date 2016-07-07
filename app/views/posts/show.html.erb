@@ -16,13 +16,7 @@
       <br>
       <small><%= @post.created_at.to_date %> </small>
       <br>
-      <% if @post.user_id == current_user.user_id %>
-      <span>
-      <%= link_to 'Edit Post', edit_post_path(@post) %> 
-      </span>
-      <% else %>
-      <p> No right to edit </p>
-      <% end %>
+
     	</div>
   	</div>
 </div>
